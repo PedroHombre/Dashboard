@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+body, h1, a, input, form {
+    margin: 0;
+    padding: 0
+}
+
+:focus {
+    outline: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background-image: url('../assets/prelogin/background.jpg');
+    background-size: cover;
+    background-position: center; 
+    box-sizing: border-box;
+}
+
+.aside {
+    max-width: 460px;
+    width: 100%;
+    height: 100vh;
+    float: left;
+    background: #fff;
+}
+
+.aside h1 {
+    font-size: 2em;
+    margin-top: 120px;
+    margin-bottom: 40px;
+    padding-left: 15px;
+}
+
+.aside h1 span {
+    color: #0052ff;
+}
+
+.form-group {
+    display: flex;
+    justify-content: center;
+}
+
+.form-group input[type="text"], .form-group input[type="password"] {
+    width: 380px;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    border-radius: 7px;
+    border: none;
+    background-color: rgb(238,240,243);
+    padding: 12px 10px;
+    text-indent: 15px;
+}
+
+.form-group input[type="submit"] {
+    background-color: #0052ff;
+    border: 2px solid #0052ff;
+    width: 400px;
+    color: #fff;
+    padding: 10px 0;
+    font-weight: 600;
+    font-size: 1.2em;
+    border-radius: 7px;
+    transition: color .3s ease-out, background-color .3s ease-out;
+    cursor: pointer;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: #fff;
+    color: #0052ff;
+}
+
+.aside a {
+    margin-top: 15px;
+    font-size: 1.15em;
+    font-weight: 600;
+    transition: color .3s ease-out;
+    text-align: center;
+    width: 100%;
+    padding-top: 5px;
+    display: block;
+}
+
+.aside a:hover {
+    color: #0052ff;
+}
