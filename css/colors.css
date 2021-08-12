@@ -1,0 +1,11 @@
+body:not(.darkmode) {
+    --default-text-color: #000;
+}
+
+body.darkmode {
+    --background-light: #161b22;
+    --background-dark: #0d1117;
+    --default-text-color: #fff;
+    --accent-border: #272727;
+    --brand-color: #0052ff;
+}
