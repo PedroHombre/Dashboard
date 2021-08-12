@@ -4,7 +4,7 @@ session_start();
  
 // CHECK IF USERR IS ALREADY LOGGED IN, IF YES THEN REDIRECT HIM TO INDEX.PHP
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
-    header("location: welcome.php");
+    header("location: index.php");
     exit;
 }
 
