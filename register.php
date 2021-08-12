@@ -1,5 +1,5 @@
-<?php require_once("controllers/controller-register.php")
-      require_once("templates/prelogin-head.php") ?>
+<?php require_once("controllers/controller-register.php");
+      require_once("templates/prelogin-head.php"); ?>
 
 <div class="aside">
     <h1 calss="title">Dashboard<span>.</span></h1>
@@ -25,4 +25,4 @@
     </div>
 </div>
 
-<?php require_once("templates/prelogin-footer.php") ?>
+<?php require_once("templates/prelogin-footer.php"); ?>

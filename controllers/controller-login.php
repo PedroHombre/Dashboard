@@ -46,7 +46,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             
             // ATTEMPT TO EXECUTE THE PREPARED STATEMENT
             if($stmt->execute()){
-                // Check if username exists, if yes then verify password
                 // CHECK IF USERNAME EXISTS, IF YES THEN VERIFY PASSWORD
                 if($stmt->rowCount() == 1){
                     if($row = $stmt->fetch()){
@@ -71,7 +70,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                     }
                 } else{
                     // USERNAME DOESN'T EXIST, DISPLAY A GENERIC ERROR MESSAGE
-                    // Username doesn't exist, display a generic error message
                     $login_err = "Invalid username or password.";
                 }
             } else{
