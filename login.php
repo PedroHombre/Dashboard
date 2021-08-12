@@ -2,7 +2,7 @@
       require_once("templates/prelogin-head.php"); ?>
 
 <div class="aside">
-    <h1 class="title">Dashboard<span>.</span></h1>
+    <?php require_once("templates/logo.html"); ?>
     <div class="wrapper">
         <?php 
         if(!empty($login_err)){

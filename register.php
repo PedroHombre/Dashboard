@@ -2,7 +2,7 @@
       require_once("templates/prelogin-head.php"); ?>
 
 <div class="aside">
-    <h1 class="title">Dashboard<span>.</span></h1>
+    <?php require_once("templates/logo.html"); ?>
     <div class="wrapper">
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="form-group">

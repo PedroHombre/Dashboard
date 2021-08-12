@@ -51,7 +51,24 @@ body {
 }
 
 .aside h1 span {
+    color: var(--default-text-color);
+    transition: color .3s ease-out;
+}
+
+.aside h1 span:hover {
     color: var(--brand-color);
+}
+
+.aside h1 span:not(:nth-child(1)) {
+    margin-left: -11px;
+}
+
+.aside h1 span.dot {
+    color: var(--brand-color);
+}
+
+.aside h1 span.dot:hover {
+    color: var(--default-text-color);
 }
 
 .form-group {
