@@ -1,4 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap');
+
+body:not(.darkmode) {
+    --default-text-color: #000;
+}
+
+body.darkmode {
+    --background-light: #161b22;
+    --background-dark: #0d1117;
+    --default-text-color: #fff;
+    --accent-border: #272727;
+    --brand-color: #0052ff;
+}
+
 body, h1, a, input, form {
     margin: 0;
     padding: 0
@@ -9,7 +22,7 @@ body, h1, a, input, form {
 }
 
 a {
-    color: #000;
+    color: var(--default-text-color);
     text-decoration: none;
 }
 
@@ -18,10 +31,8 @@ body {
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    background-image: url('../assets/prelogin/background.jpg');
-    background-size: cover;
-    background-position: center; 
-    box-sizing: border-box;
+    background-color: var(--background-dark);
+    color: var(--default-text-color);
 }
 
 .aside {
@@ -29,18 +40,18 @@ body {
     width: 100%;
     height: 100vh;
     float: left;
-    background: #fff;
+    background: var(--background-light);
 }
 
 .aside h1 {
-    font-size: 2em;
-    margin-top: 120px;
+    font-size: 2.4em;
+    margin-top: 160px;
     margin-bottom: 40px;
     padding-left: 15px;
 }
 
 .aside h1 span {
-    color: #0052ff;
+    color: var(--brand-color);
 }
 
 .form-group {
@@ -50,20 +61,26 @@ body {
 
 .form-group input[type="text"], .form-group input[type="password"] {
     width: 380px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size: 1.3em;
     border-radius: 7px;
-    border: none;
-    background-color: rgb(238,240,243);
+    background-color: var(--background-dark);
     padding: 12px 10px;
     text-indent: 15px;
+    border: 1px solid var(--accent-border);
+    transition: border .3s ease-out;
+    color: var(--default-text-color);
+}
+
+.form-group input[type="text"]:focus, .form-group input[type="password"]:focus {
+    border: 1px solid var(--brand-color);
 }
 
 .form-group input[type="submit"] {
-    background-color: #0052ff;
-    border: 2px solid #0052ff;
+    background-color: var(--brand-color);
+    border: 2px solid var(--brand-color);
     width: 400px;
-    color: #fff;
+    color: var(--default-text-color);
     padding: 10px 0;
     font-weight: 600;
     font-size: 1.2em;
@@ -73,8 +90,8 @@ body {
 }
 
 .form-group input[type="submit"]:hover {
-    background-color: #fff;
-    color: #0052ff;
+    background-color: var(--background-light);
+    color: var(--brand-color);
 }
 
 .aside a {
@@ -89,5 +106,5 @@ body {
 }
 
 .aside a:hover {
-    color: #0052ff;
+    color: var(--brand-color);
 }

@@ -20,4 +20,4 @@
         <title><?php echo $page_title ?> - Dashboard</title>
     </head>
 
-    <body>
+    <body class="darkmode">
