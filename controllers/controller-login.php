@@ -1,4 +1,7 @@
 <?php 
+// PAGE TITLE
+$page_title = "Login";
+
 // INITIALIZE THE SESSION
 session_start();
  
