@@ -53,6 +53,7 @@ body {
 .aside h1 span {
     color: var(--default-text-color);
     transition: color .3s ease-out;
+    cursor: default;
 }
 
 .aside h1 span:hover {
