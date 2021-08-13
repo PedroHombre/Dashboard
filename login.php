@@ -27,4 +27,4 @@
     </div>
 </div>
 
-<?php require_once("templates/prelogin-footer.php"); ?>
+<?php require_once("templates/prelogin-footer.html"); ?>
