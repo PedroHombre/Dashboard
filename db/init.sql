@@ -4,3 +4,11 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
+
+CREATE TABLE user_info (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    CONSTRAINT user_id FOREIGN KEY (id) REFERENCES users(id),
+    name VARCHAR(30),
+    surname VARCHAR(40),
+    birthday DATETIME
+);
