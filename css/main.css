@@ -7,6 +7,7 @@ body {
     padding: 0;
     height: 3000px;
     background: var(--background-dark);
+    color: var(--default-text-color);
 }
 
 .body-wrapper {
@@ -107,4 +108,16 @@ body {
 
 .aside-wrapper.collapsed .hamburger-btn:hover > span::after {
     transform: rotate(-26deg);
+}
+
+/* PAGE CONTENT STYLES */
+
+.page-content {
+    width: calc(100% - 300px);
+    float: left;
+    transition: width .3s ease-out;
+}
+
+.aside-wrapper.collapsed + .page-content {
+    width: calc(100% - 70px);
 }

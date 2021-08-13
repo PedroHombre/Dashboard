@@ -13,7 +13,7 @@
         </aside>
     </div>
     <div class="page-content">
-
+        <p>test</p>
     </div>
 </div>
 
