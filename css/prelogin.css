@@ -49,6 +49,14 @@ body {
     color: var(--brand-color);
 }
 
+.aside h1 span.active {
+    color: var(--brand-light);
+}
+
+.aside h1 span.active2 {
+    color: var(--brand-lighter);
+}
+
 .aside h1 span:not(:nth-child(1)) {
     margin-left: -11px;
 }
@@ -125,19 +133,4 @@ body {
     left: 0;
     background-image: linear-gradient(var(--main-gradient));
     background-size: 200% 200%;
-    /* animation: prelogin-gradient 60s ease infinite; */
-}
-
-@keyframes prelogin-gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
 }
