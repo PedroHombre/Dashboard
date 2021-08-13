@@ -12,5 +12,6 @@ sr.reveal(`.wrapper, .title`, {
 
 // PARTICLES.JS
 particlesJS.load('particles-js', '/assets/prelogin/particles.json', function () {
+    particlesJS.color.value = "#ff0000"
     console.log('callback - particles.js config loaded');
 });

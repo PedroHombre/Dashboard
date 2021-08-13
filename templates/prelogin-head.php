@@ -16,5 +16,6 @@
         <title><?php echo $page_title ?> - Dashboard</title>
     </head>
 
-    <body class="darkmode" id="particles-js">
+    <body class="darkmode">
         <?php require_once("templates/preloader.html"); ?>
+        <div id="particles-js"></div>
