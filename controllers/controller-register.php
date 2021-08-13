@@ -3,7 +3,7 @@
 // PAGE TITLE
 $page_title = "Register";
 
-// Include config file
+// INCLUDE DATABASE CONFIG FILE
 require_once "db/config.php";
  
 // Define variables and initialize with empty values

@@ -11,7 +11,7 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     exit;
 }
 
-// INCLUDE CONFIG FILE
+// INCLUDE DATABASE CONFIG FILE
 require_once "db/config.php";
  
 // DEFINE VARIABLES AND INITIALIZE WITH EMPTY VALUES

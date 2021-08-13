@@ -13,3 +13,4 @@
         <title><?php echo $page_title ?> - Dashboard</title>
     </head>
     <body class="darkmode">
+        <?php require_once "db/config.php"; ?>
