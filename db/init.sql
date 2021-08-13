@@ -7,9 +7,13 @@ CREATE TABLE users (
 );
 
 CREATE TABLE user_info (
-    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    CONSTRAINT user_id FOREIGN KEY (id) REFERENCES users(id),
+    id INT NOT NULL,
+    FOREIGN KEY (id) REFERENCES users(id),
     name VARCHAR(30),
     surname VARCHAR(40),
     birthday DATETIME
 );
+
+-- SELECTS
+
+SELECT user_info.name, user_info.surname, users.username FROM user_info INNER JOIN users ON user_info.id = users.id;
