@@ -7,7 +7,7 @@
         <!-- STYLES -->
         <link rel="stylesheet" type="text/css" href="css/preloader.css">
         <link rel='stylesheet' type="text/css" href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css'>
-        <link rel="stylesheet" type="text/css" href="css/prelogin.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
 
         <!-- AUTOMATIC TITLE -->
         <title><?php echo $page_title ?> - Dashboard</title>
