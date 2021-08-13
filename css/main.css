@@ -7,7 +7,7 @@ body {
     padding: 0;
     height: 3000px;
     background: var(--background-dark);
-    color: var(--default-text-color);
+    color: var(--default-textgit a-color);
 }
 
 .body-wrapper {
