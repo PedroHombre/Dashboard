@@ -19,7 +19,8 @@
 ?>
 
 <p>Account type: <?php echo($account_type); ?></p>
-
+<?php if($account_type == "admin") echo '<a href="admin.php">Admin panel</a>' ?>
+&nbsp;
 <a href="/controllers/controller-logout.php">Logout</a>
 
 <?php require_once("templates/footer.html"); ?>

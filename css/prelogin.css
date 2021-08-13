@@ -30,6 +30,7 @@ body {
     height: 100vh;
     float: left;
     background: var(--background-light-opacity);
+    position: relative;
 }
 
 .aside h1 {
@@ -133,4 +134,13 @@ body {
     left: 0;
     background-image: linear-gradient(var(--main-gradient));
     background-size: 200% 200%;
+}
+
+.aside a.github-link {
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    font-size: 3.2em;
+    padding-left: 30px;
+    width: 50px;
 }

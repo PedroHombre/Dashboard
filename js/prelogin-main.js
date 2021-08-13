@@ -6,7 +6,7 @@ const sr = ScrollReveal({
     reset: true
 });
 
-sr.reveal(`.wrapper, .title`, {
+sr.reveal(`.wrapper, .title, .github-link`, {
     interval: 200
 });
 

@@ -25,6 +25,9 @@
             <a href="register.php">Sign up now</a>
         </form>
     </div>
+    <a href="https://github.com/PedroHombre" class="github-link">
+        <i class='bx bxl-github'></i>
+    </a>
 </div>
 
 <?php require_once("templates/prelogin-footer.html"); ?>
