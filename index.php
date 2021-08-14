@@ -14,6 +14,7 @@
     </div>
     <div class="page-content">
         <p>test</p>
+        <?php echo htmlspecialchars($_SESSION["accountType"]); ?>
     </div>
 </div>
 

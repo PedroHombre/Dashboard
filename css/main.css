@@ -7,7 +7,8 @@ body {
     padding: 0;
     height: 3000px;
     background: var(--background-dark);
-    color: var(--default-textgit a-color);
+    color: var(--default-text-color);
+    font-family: 'Montserrat', sans-serif;
 }
 
 .body-wrapper {
@@ -88,7 +89,7 @@ body {
     top: 8px;
 }
 
-.aside-wrapper.collapsed .hamburger-btn:hover > span {
+/* .aside-wrapper.collapsed .hamburger-btn:hover > span {
     transition: none;
 }
 
@@ -108,7 +109,7 @@ body {
 
 .aside-wrapper.collapsed .hamburger-btn:hover > span::after {
     transform: rotate(-26deg);
-}
+} */
 
 /* PAGE CONTENT STYLES */
 
