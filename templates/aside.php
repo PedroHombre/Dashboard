@@ -13,7 +13,7 @@
                 $accountType = $_SESSION["accountType"];
                 if($accountType == "admin"): ?>
                     <a href="/admin/admin.php">
-                        <i class='bx bxs-label' ></i>
+                        <i class='bx bxs-user-account' ></i>
                         Admin panel
                     </a>
                 <?php endif;
