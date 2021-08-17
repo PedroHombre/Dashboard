@@ -23,11 +23,6 @@ body {
     width: 100%;
     height: 100%;
     float: left;
-    transition: max-width .3s ease-out;
-}
-
-.aside-wrapper.collapsed {
-    max-width: 70px;
 }
 
 .aside-wrapper aside {
@@ -36,89 +31,61 @@ body {
     height: 100vh;
     position: fixed;
     max-width: 300px;
-    transition: max-width .3s ease-out;
-    overflow-x: hidden;
 }
 
-.aside-wrapper.collapsed aside {
-    max-width: 70px;
-}
 
-.aside-icon-wrapper {
+.aside-logo-wrapper {
     width: 100%;
-    height: 70px;
+    height: 110px;
     display: flex;
     justify-content: left;
     align-items: center;
     border-bottom: 1px solid var(--accent-border);
 }
 
-.aside-icon-wrapper .hamburger-btn {
-    width: 36px;
-    height: 36px;
-    position: relative;
-    cursor: pointer;
-    margin-left: 18px;
+aside h1 {
+    font-size: 2.4em;
+    margin-bottom: 40px;
+    padding-left: 15px;
 }
 
-.hamburger-btn > span,
-.hamburger-btn > span::before,
-.hamburger-btn > span::after {
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: var(--default-text-color);
-    content: '';
-    transition: background-color .3s ease-out;
+aside h1 span {
+    color: var(--default-text-color);
+    transition: color .3s ease-out;
+    cursor: default;
 }
 
-.hamburger-btn:hover > span,
-.hamburger-btn:hover > span::before,
-.hamburger-btn:hover > span::after {
-    background-color: var(--brand-color);
+aside h1 span:hover {
+    color: var(--brand-color);
 }
 
-.hamburger-btn > span {
-    top: 17px;
+aside h1 span.active {
+    color: var(--brand-light);
 }
 
-.hamburger-btn > span::before {
-    top: -8px;
+aside h1 span.active2 {
+    color: var(--brand-lighter);
 }
 
-.hamburger-btn > span::after {
-    top: 8px;
+aside h1 span:not(:nth-child(1)) {
+    margin-left: -11px;
 }
 
-/* .aside-wrapper.collapsed .hamburger-btn:hover > span {
-    transition: none;
+aside h1 span.dot {
+    color: var(--brand-color);
 }
 
-.aside-wrapper .hamburger-btn:hover > span,
-.aside-wrapper .hamburger-btn:hover > span::before,
-.aside-wrapper .hamburger-btn:hover > span::after {
-    transition: transform .2s ease-out;
+aside h1 span.dot:hover {
+    color: var(--default-text-color);
 }
-
-.aside-wrapper.collapsed .hamburger-btn:hover > span {
-    background-color: transparent;
-}
-
-.aside-wrapper.collapsed .hamburger-btn:hover > span::before {
-    transform: rotate(26deg);
-}
-
-.aside-wrapper.collapsed .hamburger-btn:hover > span::after {
-    transform: rotate(-26deg);
-} */
 
 /* PAGE CONTENT STYLES */
 
 .page-content {
-    width: calc(100% - 300px);
+    width: calc(100% - 325px);
     float: left;
     transition: width .3s ease-out;
+    padding-left: 25px;
 }
 
 .aside-wrapper.collapsed + .page-content {

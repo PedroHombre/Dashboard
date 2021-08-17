@@ -1,4 +1,4 @@
-<?php 
+<?php
 // PAGE TITLE
 $page_title = "Login";
 
@@ -64,7 +64,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
-                            $_SESSION["accountType"] = $account_type;                            
+                            $_SESSION["accountType"] = $account_type;
                             
                             // REDIRECT USER TO WELCOME PAGE
                             header("location: index.php");
