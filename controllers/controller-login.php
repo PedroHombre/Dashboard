@@ -57,7 +57,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         $hashed_password = $row["password"];
                         $account_type = $row["account_type"];
                         if(password_verify($password, $hashed_password)){
-                            // PASSWORD IS CORRECT SO START A NEW SESSION 
+                            // PASSWORD IS CORRECT SO START A NEW SESSION
                             session_start();
                             
                             // STORE DATA IN SESSION VARIABLES

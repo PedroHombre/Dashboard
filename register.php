@@ -8,7 +8,7 @@
             <div class="form-group">
                 <input type="text" name="username" placeholder="Username:" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
                 <span class="invalid-feedback"><?php echo $username_err; ?></span>
-            </div>    
+            </div>
             <div class="form-group">
                 <input type="password" name="password" placeholder="Password:" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>

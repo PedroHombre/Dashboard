@@ -6,8 +6,8 @@
     <?php require_once("templates/aside.php"); ?>
     <div class="page-content">
         <p>test</p>
-        <?php 
-            if($_SESSION["accountType"]){ 
+        <?php
+            if($_SESSION["accountType"]){
                 $accountType = $_SESSION["accountType"];
                 echo htmlspecialchars($accountType);
                 if($accountType == "admin"){
