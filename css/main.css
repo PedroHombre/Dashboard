@@ -49,6 +49,10 @@ aside h1 {
     padding-left: 15px;
 }
 
+aside h1 a {
+    text-decoration: none;
+}
+
 aside h1 span {
     color: var(--default-text-color);
     transition: color .3s ease-out;

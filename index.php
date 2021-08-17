@@ -11,7 +11,7 @@
                 $accountType = $_SESSION["accountType"];
                 echo htmlspecialchars($accountType);
                 if($accountType == "admin"){
-                    echo '<br /><a href="admin.php">Admin panel</a>';
+                    echo '<br /><a href="/admin/admin.php">Admin panel</a>';
                 }
             }
         ?>
