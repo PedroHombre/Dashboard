@@ -13,6 +13,11 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+a {
+    color: var(--default-text-color);
+    text-decoration: none;
+}
+
 .body-wrapper {
     box-sizing: border-box;
     height: 100%;
@@ -49,10 +54,6 @@ aside h1 {
     padding-left: 15px;
 }
 
-aside h1 a {
-    text-decoration: none;
-}
-
 aside h1 span {
     color: var(--default-text-color);
     transition: color .3s ease-out;
@@ -81,6 +82,37 @@ aside h1 span.dot {
 
 aside h1 span.dot:hover {
     color: var(--default-text-color);
+}
+
+aside .links-wrapper {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+aside .links-wrapper a {
+    font-size: 1.1em;
+    padding: 10px 22px 10px 45px;
+    border-radius: 30px;
+    margin-bottom: 5px;
+    transition: background-color .3s ease-out, color .3s ease-out;
+    position: relative;
+}
+
+aside .links-wrapper a i {
+    font-size: 1.2em;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+}
+
+aside .links-wrapper a:hover {
+    background-color: var(--background-dark);
+    color: var(--brand-color);
 }
 
 /* PAGE CONTENT STYLES */
