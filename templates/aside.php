@@ -4,6 +4,10 @@
             <?php require_once("templates/logo.html"); ?>
         </div>
         <div class="links-wrapper">
+            <a href="/my-account.php">
+                <i class='bx bxs-user'></i>
+                My account
+            </a>
             <a href="#">
                 <i class='bx bx-cog'></i>
                 Settings
