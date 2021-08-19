@@ -76,7 +76,60 @@ aside .links-wrapper a.active {
 /* PAGE CONTENT STYLES */
 
 .page-content {
-    width: calc(100% - 95px);
+    width: calc(100% - 120px);
     float: left;
-    padding-left: 25px;
+    padding: 25px;
+}
+
+/* HOME SCREEN WELCOME BLOCK */
+
+.homescreen-info {
+    width: calc(100% - 100px);
+    padding: 20px 50px;
+    background: var(--background-light);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+}
+
+.homescreen-info .account-profile-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 40px;
+}
+
+.homescreen-info .account-profile-img .profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background: #fff;
+    border: 2px solid var(--background-dark);
+    float: left;
+    position: relative;
+}
+
+.homescreen-info .account-profile-img .profile-img::after {
+    content: '';
+    position: absolute;
+    right: 5px;
+    bottom: 6px;
+    background: lime;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.homescreen-info .account-name-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.homescreen-info .account-name-wrapper h1,
+.homescreen-info .account-name-wrapper h2 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.8em;
 }
