@@ -86,7 +86,7 @@ aside .links-wrapper a.active {
 .homescreen-info {
     width: calc(100% - 100px);
     padding: 20px 50px;
-    background: var(--background-light);
+    /* background: var(--background-light); */
     border-radius: 25px;
     display: flex;
     flex-direction: row;
