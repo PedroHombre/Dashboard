@@ -5,7 +5,15 @@
 <div class="body-wrapper">
     <?php require_once("templates/aside.php"); ?>
     <div class="page-content">
-        <p>test</p>
+        <div class="homescreen-info">
+            <div class="account-info-wrapper">
+                <div class="account-profile-img"></div>
+                <div class="account-name-wrapper">
+                    <h1>Welcome,</h1>
+                    <h2><?php echo htmlspecialchars($_SESSION["username"]); ?>!</h2>
+                </div>
+            </div>
+        </div>
         <p><a href="controllers/controller-logout.php">Logout</a></p>
     </div>
 </div>
