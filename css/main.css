@@ -153,5 +153,14 @@ aside .logout-btn a:hover {
 .homescreen-info .account-name-wrapper h2 {
     margin: 0;
     font-weight: 500;
+}
+
+.homescreen-info .account-name-wrapper h1 {
+    font-size: 1.6em;
+    color: var(--subtle-text-color);
+}
+
+.homescreen-info .account-name-wrapper h2 {
     font-size: 1.8em;
+    padding-left: 15px;
 }
