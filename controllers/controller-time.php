@@ -9,7 +9,7 @@ $hour = $currentTime->format('H');
 $minute = $currentTime->format('m');
 $second = $currentTime->format('s');
 
-
+// WELCOME MESSAGE ACCORDING TO THE PART OF THE DAY
 if( $hour >= 5 && $hour < 12 ) {
     $welcome = "Good Morning";
 } elseif( $hour >= 12 && $hour < 18 ) {
