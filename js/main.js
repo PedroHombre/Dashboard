@@ -6,6 +6,6 @@ const sr = ScrollReveal({
     reset: false
 });
 
-sr.reveal(`.links-wrapper a, .logout-btn a`, {
+sr.reveal(`.links-wrapper a, .logout-btn a, .homescreen-info .account-name-wrapper h1, .homescreen-info .account-name-wrapper h2`, {
     interval: 200
 });
