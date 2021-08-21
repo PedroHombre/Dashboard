@@ -6,6 +6,6 @@ const sr = ScrollReveal({
     reset: false
 });
 
-sr.reveal(`.links-wrapper a`, {
+sr.reveal(`.links-wrapper a, .logout-btn a`, {
     interval: 200
 });
