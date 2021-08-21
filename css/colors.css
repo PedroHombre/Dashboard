@@ -11,5 +11,6 @@ body.darkmode {
     --brand-color: #0052ff;
     --brand-light: #3877ff;
     --brand-lighter: #6d9bff;
-    --main-gradient: to left bottom, #0052ff, #0044d1, #0036a4, #012879, #061a50, #11153f, #13112e, #120b1f, #17111f, #1b161f, #1f1b20, #212021
+    --main-gradient: to left bottom, #0052ff, #0044d1, #0036a4, #012879, #061a50, #11153f, #13112e, #120b1f, #17111f, #1b161f, #1f1b20, #212021;
+    --alert-color: #cc5858;
 }
