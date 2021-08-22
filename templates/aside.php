@@ -9,7 +9,7 @@
             <a href="/index.php" <?php if($pageName == "Home"){ ?>class="active"<?php } ?> title="Homepage">
                 <i class='bx bxs-home'></i>
             </a>
-            <a href="/my-account.php" title="My account">
+            <a href="/my-account.php" <?php if($pageName == "My account"){ ?>class="active"<?php } ?> title="My account">
                 <i class='bx bxs-user'></i>
             </a>
             <a href="#" title="Settings">
