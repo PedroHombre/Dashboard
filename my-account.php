@@ -6,6 +6,15 @@
       <?php require_once("templates/aside.php"); ?>
       <div class="page-content">
             <h2><?php echo $pageName; ?></h2>
+            <form action = "" method = "POST" enctype = "multipart/form-data">
+                  <input type = "file" name = "image" />
+                  <input type = "submit"/>
+                  <ul>
+                        <li>Sent file: <?php echo $_FILES['image']['name'];  ?>
+                        <li>File size: <?php echo $_FILES['image']['size'];  ?>
+                        <li>File type: <?php echo $_FILES['image']['type'] ?>
+                  </ul>
+            </form>
       </div>
 </div>
 
