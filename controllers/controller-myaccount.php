@@ -26,9 +26,21 @@ if(isset($_FILES['image'])){
     
     if(empty($errors)==true) {
         move_uploaded_file($file_tmp,"uploads/".$file_name);
+        $filePath = "/uploads/".$file_name;
+
+        $query = "INSERT INTO user_info (avatar_url) VALUES (':path') WHERE id = :id";
+        $query_params = array(':id' => $_SESSION["id"], ':path' => $filePath);
+        try{
+            $stmt = $pdo->prepare($query);
+            $stmt->execute($query_params);
+            // $row = $stmt->fetch(PDO::FETCH_ASSOC);
+            // $account_type = $row["account_type"];
+        } catch(PDOException $e) {
+            die("ERROR: Statement error. " . $e->getMessage());
+        }
     }else{
         print_r($errors);
     }
- }
+}
 
 ?>

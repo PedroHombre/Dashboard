@@ -11,7 +11,8 @@ CREATE TABLE user_info (
     FOREIGN KEY (id) REFERENCES users(id),
     name VARCHAR(30),
     surname VARCHAR(40),
-    birthday DATETIME
+    birthday DATETIME,
+    avatar_url VARCHAR(255)
 );
 
 -- SELECTS
