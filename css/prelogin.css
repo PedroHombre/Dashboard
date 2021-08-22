@@ -10,6 +10,12 @@ body, h1, a, input, form {
     outline: none;
 }
 
+input:autofill,
+input:-webkit-autofill {
+    color: var(--default-text-color);
+    background: var(--background-dark);
+}
+
 a {
     color: var(--default-text-color);
     text-decoration: none;
