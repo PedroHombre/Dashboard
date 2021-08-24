@@ -69,7 +69,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loginCount"] = $login_count;
 
                             // CONTROLLER FOR FILLING DATABASE TABLES WITH USERS ID
-                            require_once("controllers/controllers-databasefill.php");
+                            // require_once("controllers/controllers-databasefill.php");
 
                             // REDIRECT USER TO WELCOME PAGE
                             header("location: index.php");
