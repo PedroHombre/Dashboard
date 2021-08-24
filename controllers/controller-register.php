@@ -1,18 +1,18 @@
-<?php 
+<?php
 
 // PAGE TITLE
 $page_title = "Register";
 
 // INCLUDE DATABASE CONFIG FILE
 require_once "db/config.php";
- 
+
 // DEFINE VARIABLES AND INITIALIZE WITH EMPTY VALUES
 $username = $password = $confirm_password = "";
 $username_err = $password_err = $confirm_password_err = "";
- 
+
 // PROCESSING FORM DATA WHEN FORM IS SUBMITTED
 if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
+
     // VALIDATE USERNAME
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter a username.";
@@ -21,14 +21,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } else{
         // PREPARE A SELECT STATEMENT
         $sql = "SELECT id FROM users WHERE username = :username";
-        
+
         if($stmt = $pdo->prepare($sql)){
             // BIND VARIABLES TO THE PREPARED STATEMENT AS PARAMETERS
             $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
-            
+
             // SET PARAMETERS
             $param_username = trim($_POST["username"]);
-            
+
             // ATTEMPT TO EXECUTE THE PREPARED STATEMENT
             if($stmt->execute()){
                 if($stmt->rowCount() == 1){
@@ -44,7 +44,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             unset($stmt);
         }
     }
-    
+
     // VALIDATE PASSWORD
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter a password.";
@@ -53,7 +53,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     } else{
         $password = trim($_POST["password"]);
     }
-    
+
     // VALIDATE CONFIRM PASSWORD
     if(empty(trim($_POST["confirm_password"]))){
         $confirm_password_err = "Please confirm password.";
@@ -63,22 +63,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $confirm_password_err = "Password did not match.";
         }
     }
-    
+
     // CHECK INPUT ERRORS BEFORE INSERTING IN DATABASE
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
-        
+
         // PREPARE AN INSERT STATEMENT
         $sql = "INSERT INTO users (username, password) VALUES (:username, :password)";
-         
+
         if($stmt = $pdo->prepare($sql)){
             // BIND VARIABLES TO THE PREPARED STATEMENT AS PARAMETERS
             $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
             $stmt->bindParam(":password", $param_password, PDO::PARAM_STR);
-            
+
             // SET PARAMETERS
             $param_username = $username;
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
-            
+
             // ATTEMPT TO EXECUTE THE PREPARED STATEMENT
             if($stmt->execute()){
                 // REDIRECT TO LOGIN PAGE
@@ -91,7 +91,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             unset($stmt);
         }
     }
-    
+
     // CLOSE CONNECTION
     unset($pdo);
 }
