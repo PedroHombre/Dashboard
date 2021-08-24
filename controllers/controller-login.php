@@ -38,7 +38,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // VALIDATE CREDENTIALS
     if(empty($username_err) && empty($password_err)){
         // PREPARE A SELECT STATEMENT
-        $sql = "SELECT id, username, password, account_type FROM users WHERE username = :username";
+        $sql = "SELECT id, username, password, account_type, login_count FROM users WHERE username = :username";
 
         if($stmt = $pdo->prepare($sql)){
             // BIND VARIABLES TO THE PREPARED STATEMENT AS PARAMETERS
@@ -69,7 +69,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["loginCount"] = $login_count;
 
                             // CONTROLLER FOR FILLING DATABASE TABLES WITH USERS ID
-                            // require_once("controllers/controllers-databasefill.php");
+                            require_once("controllers/controllers-databasefill.php");
 
                             // REDIRECT USER TO WELCOME PAGE
                             header("location: index.php");
