@@ -3,7 +3,8 @@ CREATE TABLE users (
     username VARCHAR(50) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
-    account_type VARCHAR(10) DEFAULT "user"
+    account_type VARCHAR(10) DEFAULT "user",
+    login_count INT DEFAULT 0
 );
 
 CREATE TABLE user_info (

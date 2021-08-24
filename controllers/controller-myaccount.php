@@ -13,8 +13,8 @@ if(isset($_FILES['image'])){
     $file_type = $_FILES['image']['type'];
     $file_ext_explode = explode('.',$_FILES['image']['name']);
     $file_ext_end = end($file_ext_explode);
-    $file_ext=strtolower($file_ext_end);
-    $extensions= array("jpeg","jpg","png");
+    $file_ext = strtolower($file_ext_end);
+    $extensions = array("jpeg","jpg","png");
 
     if(in_array($file_ext,$extensions)=== false){
         $errors[]="extension not allowed, please choose a JPEG or PNG file.";
