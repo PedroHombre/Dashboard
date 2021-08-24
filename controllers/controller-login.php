@@ -56,6 +56,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         $username = $row["username"];
                         $hashed_password = $row["password"];
                         $account_type = $row["account_type"];
+                        $login_count = $row["login_count"];
                         if(password_verify($password, $hashed_password)){
                             // PASSWORD IS CORRECT SO START A NEW SESSION
                             session_start();
@@ -65,7 +66,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
                             $_SESSION["accountType"] = $account_type;
-                            
+                            $_SESSION["loginCount"] = $login_count;
+
+                            require_once("controllers/controller-databasefill.php");
+
                             // REDIRECT USER TO WELCOME PAGE
                             header("location: index.php");
                         } else{
