@@ -4,7 +4,8 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     account_type VARCHAR(10) DEFAULT "user",
-    login_count INT DEFAULT 0
+    login_count INT DEFAULT 0,
+    first_user VARCHAR(5) DEFAULT "True"
 );
 
 CREATE TABLE user_info (

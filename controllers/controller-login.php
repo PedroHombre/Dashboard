@@ -38,7 +38,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // VALIDATE CREDENTIALS
     if(empty($username_err) && empty($password_err)){
         // PREPARE A SELECT STATEMENT
-        $sql = "SELECT id, username, password, account_type, login_count FROM users WHERE username = :username";
+        $sql = "SELECT id, username, password, account_type, login_count, first_user FROM users WHERE username = :username";
 
         if($stmt = $pdo->prepare($sql)){
             // BIND VARIABLES TO THE PREPARED STATEMENT AS PARAMETERS
@@ -57,6 +57,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         $hashed_password = $row["password"];
                         $account_type = $row["account_type"];
                         $login_count = $row["login_count"];
+                        $first_user = $row["first_user"];
                         if(password_verify($password, $hashed_password)){
                             // PASSWORD IS CORRECT SO START A NEW SESSION
                             session_start();
@@ -67,6 +68,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION["username"] = $username;
                             $_SESSION["accountType"] = $account_type;
                             $_SESSION["loginCount"] = $login_count;
+                            $_SESSION["firstUser"] = $first_user;
 
                             // CONTROLLER FOR FILLING DATABASE TABLES WITH USERS ID
                             require_once("controllers/controllers-databasefill.php");
